@@ -1,0 +1,22 @@
+{
+  "name": "model-registry",
+  "version": "1.0.0",
+  "description": "On-chain record book for basketball model versions (local practice chain)",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "gas": "hardhat run scripts/gas-report.js",
+    "node": "hardhat node",
+    "deploy": "hardhat run scripts/deploy.js --network localhost",
+    "smoke": "hardhat run scripts/smoke-test.js --network localhost"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.29.1",
+    "solc": "0.8.24"
+  },
+  "private": true
+}

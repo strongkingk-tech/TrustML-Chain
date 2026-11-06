@@ -1,0 +1,265 @@
+[
+  {
+    "type": "constructor",
+    "stateMutability": "undefined",
+    "payable": false,
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_registrar"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "AlreadyRegistered",
+    "inputs": [
+      {
+        "type": "string",
+        "name": "runId"
+      },
+      {
+        "type": "uint8",
+        "name": "stage"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "EmptyFingerprint",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "EmptyRunId",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "InvalidAccuracy",
+    "inputs": [
+      {
+        "type": "uint16",
+        "name": "accuracyBps"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "InvalidStage",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "stage"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "NotRegistrar",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "caller"
+      }
+    ]
+  },
+  {
+    "type": "event",
+    "anonymous": false,
+    "name": "VersionRegistered",
+    "inputs": [
+      {
+        "type": "bytes32",
+        "name": "key",
+        "indexed": true
+      },
+      {
+        "type": "string",
+        "name": "runId",
+        "indexed": false
+      },
+      {
+        "type": "uint8",
+        "name": "stage",
+        "indexed": true
+      },
+      {
+        "type": "bytes32",
+        "name": "fingerprint",
+        "indexed": false
+      },
+      {
+        "type": "uint16",
+        "name": "accuracyBps",
+        "indexed": false
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "MAX_ACCURACY_BPS",
+    "constant": true,
+    "stateMutability": "view",
+    "payable": false,
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "uint16",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "MAX_STAGE",
+    "constant": true,
+    "stateMutability": "view",
+    "payable": false,
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "uint8",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "getRecord",
+    "constant": true,
+    "stateMutability": "view",
+    "payable": false,
+    "inputs": [
+      {
+        "type": "string",
+        "name": "runId"
+      },
+      {
+        "type": "uint8",
+        "name": "stage"
+      }
+    ],
+    "outputs": [
+      {
+        "type": "bool",
+        "name": "exists"
+      },
+      {
+        "type": "bytes32",
+        "name": "fingerprint"
+      },
+      {
+        "type": "uint16",
+        "name": "accuracyBps"
+      },
+      {
+        "type": "uint64",
+        "name": "registeredAt"
+      },
+      {
+        "type": "address",
+        "name": "submitter"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "isRegistered",
+    "constant": true,
+    "stateMutability": "view",
+    "payable": false,
+    "inputs": [
+      {
+        "type": "string",
+        "name": "runId"
+      },
+      {
+        "type": "uint8",
+        "name": "stage"
+      }
+    ],
+    "outputs": [
+      {
+        "type": "bool",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "recordCount",
+    "constant": true,
+    "stateMutability": "view",
+    "payable": false,
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "register",
+    "constant": false,
+    "payable": false,
+    "inputs": [
+      {
+        "type": "string",
+        "name": "runId"
+      },
+      {
+        "type": "uint8",
+        "name": "stage"
+      },
+      {
+        "type": "bytes32",
+        "name": "fingerprint"
+      },
+      {
+        "type": "uint16",
+        "name": "accuracyBps"
+      }
+    ],
+    "outputs": []
+  },
+  {
+    "type": "function",
+    "name": "registrar",
+    "constant": true,
+    "stateMutability": "view",
+    "payable": false,
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "address",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "versionKey",
+    "constant": true,
+    "stateMutability": "pure",
+    "payable": false,
+    "inputs": [
+      {
+        "type": "string",
+        "name": "runId"
+      },
+      {
+        "type": "uint8",
+        "name": "stage"
+      }
+    ],
+    "outputs": [
+      {
+        "type": "bytes32",
+        "name": ""
+      }
+    ]
+  }
+]

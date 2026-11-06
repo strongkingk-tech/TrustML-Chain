@@ -1,0 +1,57 @@
+[
+  {
+    "operation": "Deploy contract",
+    "gas": 440373,
+    "note": "one time"
+  },
+  {
+    "operation": "register (stage 1, first record in contract)",
+    "gas": 93882,
+    "note": "first write also sets recordCount from 0 to 1"
+  },
+  {
+    "operation": "register (stage 2)",
+    "gas": 76782,
+    "note": ""
+  },
+  {
+    "operation": "register (stage 3)",
+    "gas": 76782,
+    "note": ""
+  },
+  {
+    "operation": "register (58-char run id)",
+    "gas": 77749,
+    "note": "longer id costs a little more in calldata and event data"
+  },
+  {
+    "operation": "register rejected: duplicate record",
+    "gas": 26211,
+    "note": "gas still charged on revert"
+  },
+  {
+    "operation": "register rejected: not the registrar",
+    "gas": 24340,
+    "note": "gas still charged on revert"
+  },
+  {
+    "operation": "getRecord (read, existing record)",
+    "gas": 27397,
+    "note": "as a transaction, includes 21,000 base; off-chain eth_call is free"
+  },
+  {
+    "operation": "getRecord (read, no record)",
+    "gas": 27397,
+    "note": "as a transaction, includes 21,000 base; off-chain eth_call is free"
+  },
+  {
+    "operation": "isRegistered (read)",
+    "gas": 25034,
+    "note": "as a transaction, includes 21,000 base; off-chain eth_call is free"
+  },
+  {
+    "operation": "Register all 3 stages of one run (total)",
+    "gas": 247422,
+    "note": "stage 1 here pays the first-write counter cost"
+  }
+]
